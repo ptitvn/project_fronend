@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý tài chính cá nhân</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body>
+    <div class="beginning">
+      <div class="content">📒 Tài Chính Cá Nhân K24_Rikkei</div>
+      <div class="head">
+        <div class="dropdown">
+          <button id="accountBtn">Tài khoản</button>
+          <div class="dropdown-content" id="dropdownContent">
+            <button class="logout-button">Đăng xuất</button>
+          </div>
+        </div>
+        <a href=""><i class="fa-solid fa-chevron-down"></i></a>
+      </div>
+    </div>
+    <div class="tbody">
+      <div class="main">
+        <h2>🎯 Kiểm soát chi tiêu thông minh</h2>
+        <p>Theo dõi ngân sách và thu chi hằng tháng dễ dàng</p>
+      </div>
+      <div class="auxiliary">
+        <div class="content">📊 Quản Lý Tài Chính Cá Nhân</div>
+        <div class="container">
+          <span> 📅 Chọn tháng:</span>
+          <input type="month" id="monthSelect" />
+        </div>
+        
+        <div class="container2">
+          <span>💰 Ngân sách tháng:</span>
+          <input type="number" id="budgetInput" placeholder="VD 5000000" />
+          <button id="saveBudgetBtn">Lưu</button>
+        </div>
+        <div class="container3">
+          <p>Số tiền còn lại</p>
+          <div id="remainingAmount">0 VND</div>
+        </div>
+        <div class="container4">
+          <p>💼 Quản lý danh mục (theo tháng)</p>
+          <div class="enter">
+            <input type="text" id="categoryName" placeholder="Tên danh mục" />
+            <input type="number" id="categoryLimit" placeholder="Giới hạn (VND)" />
+            <button id="addCategoryBtn">Thêm danh mục</button>
+          </div>
+          <div id="categoriesList">
+            <!-- Các thể loại sẽ được thêm vào đây một cách linh hoạt -->
+          </div>
+        </div>
+        <div class="container5">
+            <input type="number" id="expenseAmount" placeholder="Số tiền">
+            <select id="expenseCategory">
+                <option value="">Tiền chi tiêu </option>
+                <option value="Khác">Khác</option>
+            </select>
+            <input type="text" id="expenseNote" placeholder="Ghi chú">
+            <button id="addExpenseBtn">Thêm</button>
+        </div>
+
+        <div class="container6">
+            <p>🧾 Lịch sử giao dịch</p>
+            <div class="select">
+              <div class="find">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="tìm nội dung" />
+              </div>
+              <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <select id="sortExpense">
+                    <option value="">Sắp xếp theo giá</option>
+                    <option value="asc">Tăng dần</option>
+                    <option value="desc">Giảm dần</option>
+                </select>
+            </div>
+            <div id="expensesHistory" class="content3"></div>
+            <div class="move">
+                <button class="item" id="prevPageBtn">Previous</button>
+                <span id="pageInfo" class="button"> 1/1</span>
+                <button class="item2" id="nextPageBtn">Next</button>
+            </div>
+        </div>
+
+        <div class="container7" id="budgetWarning">
+          <!-- Cảnh báo ngân sách sẽ xuất hiện ở đây -->
+        </div>
+        <div class="container8">
+          <p>📆 Thống kê chi tiêu các tháng</p>
+          <div class="item">
+            <span>tháng</span>
+            <span>chi tiêu</span>
+            <span>Ngân sách</span>
+            <span>Trạng thái</span>
+          </div>
+          <div id="monthlyStats">
+            <!-- Số liệu thống kê hàng tháng sẽ được thêm vào đây một cách linh hoạt -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tfoot">
+      <p>© 2025 Quản Lý Tài Chính Cá Nhân. by Quốc Hai!</p>
+    </div>
+    <script src="../js/index.js"></script>
+  </body>
+</html>

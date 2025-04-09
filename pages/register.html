@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản</title>
+    <link rel="stylesheet" href="../css/register.css">
+    
+</head>
+<body>
+    <div class="main">
+        <h2>Đăng ký tài khoản</h2>
+        <form id="registerForm">
+            <input type="email" id="email" placeholder="Email" >
+            <div class="error" id="emailError"></div>
+            
+            <input type="password" id="password" placeholder="Mật khẩu" >
+            <div class="error" id="passwordError"></div>
+            
+            <input type="password" id="confirmPassword" placeholder="Xác nhận mật khẩu" >
+            <div class="error" id="confirmPasswordError"></div>
+            
+            <button type="submit">Đăng ký</button>
+            <p>Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+        </form>
+    </div>
+    <script src="../js/register.js">   </script>
+</body>
+</html>
